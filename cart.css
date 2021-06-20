@@ -1,0 +1,453 @@
+:root {
+    --black: #222;
+    --white: #fff;
+    --secondary_bg: #ffba00;
+    --main_bg: #ff6c00;
+    --lg: linear-gradient(90deg, var(--secondary_bg) 0%, var(--main_bg) 100%);
+    --box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+    --border: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h1,
+li,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    color: var(--black);
+    font-weight: 500;
+    line-height: 1.2!important;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* nav starts here  */
+
+nav {
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--box-shadow);
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100;
+}
+
+nav .right {
+    width: 40%;
+}
+
+nav .right .active_nav {
+    color: var(--secondary_bg);
+}
+
+nav .right ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li:hover {
+    color: var(--secondary_bg);
+    cursor: pointer;
+}
+
+nav .right ul li.icon {
+    margin-left: 1rem;
+}
+
+
+/* main_body starts here  */
+
+.main_body {
+    margin: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main_body .bag {
+    width: 70%;
+}
+
+.main_body .bag>h1 {
+    font-size: 1.3rem;
+}
+
+.main_body .bag>h1>i {
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: var(--main_bg);
+}
+
+.main_body .bag .shopping_bag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_body .bag .shopping_bag .row {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+}
+
+.main_body .bag .shopping_bag .row .info button {
+    border: none;
+    outline: none;
+    font-size: .8rem;
+    margin-top: 1rem;
+    border: 1px solid var(--main_bg);
+    background: transparent;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    color: var(--main_bg);
+    cursor: pointer;
+    transition: .3s all ease-in;
+}
+
+.main_body .bag .shopping_bag .row .info button:hover {
+    color: var(--white);
+    background: #f93042;
+}
+
+.main_body .bag .shopping_bag .row .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_body .bag .shopping_bag .row .info h3 {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.main_body .bag .shopping_bag .row .quatity i {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main_bg);
+    border-radius: 50%;
+    border: 1px solid var(--main_bg);
+    font-size: .8rem;
+}
+
+.main_body .bag .shopping_bag .row .quatity i.add {
+    color: var(--white);
+    background: linear-gradient(45deg, var(--main_bg), var(--secondary_bg));
+}
+
+.main_body .bag .shopping_bag .row .quatity p {
+    margin: 0 1rem;
+}
+
+.main_body .bag .shopping_bag .row .img img {
+    width: 100px;
+    height: 100px;
+}
+
+.main_body .bag .shopping_bag .row .info {
+    width: 60%;
+    padding-left: 1rem;
+}
+
+.main_body .bag .shopping_bag .row .quatity {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_body .space {
+    width: 30%;
+}
+
+
+/* checkout starts here  */
+
+.main_body .checkout {
+    width: 30%;
+    position: fixed;
+    top: 40%;
+    left: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_body .checkout .row h3,
+.main_body .checkout .row p {
+    font-weight: 800;
+}
+
+.main_body .checkout .row {
+    width: 80%;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_body .checkout .proceed {
+    margin-top: 2rem;
+    width: 80%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    background: linear-gradient(45deg, var(--main_bg), var(--secondary_bg));
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.main_body .checkout .proceed i {
+    margin-left: .5rem;
+}
+
+
+/* footer starts here  */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #2d1e58;
+    color: var(--white) !important;
+}
+
+footer .top {
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+footer .top ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .top ul li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white) !important;
+}
+
+footer .top ul li i {
+    margin-left: 1rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--main_bg);
+    border: 1px solid var(--main_bg);
+}
+
+footer .top .contact {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .top .contact h4 {
+    color: var(--white);
+    margin: 1rem;
+}
+
+footer .top .contact .input {
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .top .contact .input input {
+    padding: .6rem 2rem;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid var(--main_bg);
+    margin-right: 1rem;
+}
+
+footer .top .contact .input button {
+    padding: .45rem 2rem;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid var(--main_bg);
+    color: var(--white);
+    background: var(--lg);
+    font-weight: 800;
+}
+
+footer .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-bottom: 0;
+    border-top: 1px solid var(--main_bg);
+}
+
+.bottom_nav {
+    display: none;
+}
+
+.nav_bag {
+    display: none;
+}
+
+
+/* responsiveness starts here  */
+
+@media screen and (max-width: 1109px) {
+    .main_body .bag .shopping_bag {
+        width: 70%;
+    }
+    .main_body .bag .shopping_bag .row .img img {
+        width: 80px;
+        height: 80px;
+    }
+    .main_body .bag .shopping_bag .row .quatity {
+        width: 30%;
+    }
+    .main_body .bag .shopping_bag .row .info {
+        width: 40%;
+    }
+    .main_body .checkout {
+        left: 60%;
+        width: 35%;
+    }
+    .main_body .checkout .proceed {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .main_body .space {
+        display: none;
+        width: 0;
+    }
+    .main_body .checkout {
+        width: 100%;
+        margin-top: 1rem;
+        left: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main_body .bag .shopping_bag {
+        width: 100%;
+    }
+    .main_body .bag {
+        width: 100%;
+    }
+    .main_body {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 734px) {
+    footer {
+        padding-bottom: 6rem;
+    }
+    footer .top {
+        width: 100%;
+    }
+    footer .top ul {
+        flex-direction: column;
+    }
+    footer .top ul li {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    nav .right ul {
+        display: none;
+    }
+    nav .right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    nav .right .nav_bag {
+        display: block;
+    }
+    .bottom_nav {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background: var(--white) !important;
+        border-top: 1px solid var(--main_bg);
+        border-radius: 10px;
+        padding: 1rem .5rem;
+        z-index: 10000;
+    }
+    .bottom_nav .row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: var(--white);
+        color: var(--main_bg);
+        width: 25%;
+        padding: .5rem 1rem;
+        border-radius: 100px;
+    }
+    .bottom_nav .row p {
+        display: none;
+    }
+    .bottom_nav .row:first-child {
+        width: 60%;
+        background: var(--lg);
+        color: var(--white);
+    }
+    .bottom_nav .row:first-child p {
+        display: block;
+    }
+}
