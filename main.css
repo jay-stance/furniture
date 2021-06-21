@@ -82,6 +82,11 @@ nav {
     top: 0 !important;
 }
 
+nav .left img {
+    width: 80px;
+    height: 50px;
+}
+
 nav .right {
     width: 40%;
 }
